@@ -19,5 +19,5 @@ addopts = "-v --cov"
 
 [tool.coverage.run]
 branch = true
-include = ["tests/*", "code/*"]
+include = ["tests/*", "olympics/*"]
 
