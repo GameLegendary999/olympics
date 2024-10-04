@@ -1,6 +1,7 @@
 [tool.setuptools]
 packages = []
 
+
 [project]
 name = 'olympics'
 version = '0.1'
@@ -10,3 +11,13 @@ dependencies = [
   'rich',
   'fastapi[standard]',
 ]
+
+
+# configuration coverage
+[tool.pytest.ini_options]
+addopts = "-v --cov"
+
+[tool.coverage.run]
+branch = true
+include = ["tests/*", "code/*"]
+
