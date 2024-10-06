@@ -212,36 +212,45 @@ de commande doivent rejeter proprement les types inattendus : si l’applicati
 lève une exception, on peut considérer cela comme un bug.
 
 1. Installez la bibliothèque qu’il faut pour tester la couverture. Ajoutez
-   cette bibliothèque aux dépendances déjà listées dans `pyproject.toml`.
+   cette bibliothèque aux dépendances déjà listées dans `pyproject.toml`. ///
+
 
 2. Configurez pytest pour avoir la couverture uniquement sur les dossiers
    `olympics` et `tests`. Enregistrez cette configuration dans
-   `pyproject.toml`.
+   `pyproject.toml`.///
+
 
 3. Configurez pytest pour afficher le détail des lignes qui ne sont pas
    couvertes dans le terminal. Enregistrez cette configuration dans
-   `pyproject.toml`.
+   `pyproject.toml`.///
+
 
 4. Écrivez des tests pour `db.py`, dans le fichier `test_db.py`. Inspirez-vous
-   du test déjà écrit.
+   du test déjà écrit.///
+
 
 5. Un bug est caché dans le fichier, faites un test de non-régression dédié et
-   commitez-le avec la correction.
+   commitez-le avec la correction.///
+
 
 6. Recommencez les opérations 4 et 5 avec `api.py`.
 
+
 7. Recommencez les opérations 4 et 5 avec `cli.py`. À quoi sert le paramètre
    « file » ? Comment cette technique s’appelle-t-elle ?
+
 
 8. Recommencez les opérations 4 et 5 avec `__main__.py`. À quoi sert le
    commentaire « pragma: no cover » ? Grâce à votre expérience acquise avec la
    question précédente, utilisez la même technique pour améliorer l’efficacité
    de vos tests.
 
+
 9. Vous devez avoir une couverture de 100%. Est-ce suffisant pour que
    l’ensemble du code fonctionne parfaitement ? Quels autres types de tests
    pourraient être idéalement réalisés ? (Ne les écrivez pas, décrivez-les
    simplement.)
+
 
 10. Pourquoi vous a-t-il été demandé d’écrire les tests dans cet ordre-là ? À
     quoi cela sert-il de regrouper une correction de bug et un test de

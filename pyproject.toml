@@ -15,7 +15,7 @@ dependencies = [
 
 # configuration coverage
 [tool.pytest.ini_options]
-addopts = "-v --cov"
+addopts = "-v --cov --cov-report=term-missing"
 
 [tool.coverage.run]
 branch = true
