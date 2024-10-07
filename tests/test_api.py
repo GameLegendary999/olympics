@@ -38,10 +38,14 @@ def test_medals():
 
 
 def test_discipline_athletes():
-    response = client.get('/discipline-athletes/{discipline_id}')
-    assert response.status_code == 422
+    response = client.get('/discipline-athletes/')
+    assert response.status_code == 404
     assert len(response.json()) == 1
 
+def test_discipline_athletes_valid_id():
+    response = client.get("/discipline-athletes/1")
+    assert response.status_code == 200
+    response.json() == {"athlete_ids": 95}
 
 def test_top_countries():
     response = client.get('/top-countries/')

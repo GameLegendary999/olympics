@@ -72,7 +72,7 @@ def medals(id: int | None = None):
 @app.get("/discipline-athletes/{discipline_id}")
 def discipline_athletes(discipline_id: int):
     """List of athlete ids linked to given discipline id."""
-    return db.get_discipline_athletes()
+    return db.get_discipline_athletes(discipline_id)
 
 
 # Complex API entry points

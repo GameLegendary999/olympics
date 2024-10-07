@@ -233,11 +233,12 @@ lève une exception, on peut considérer cela comme un bug.
    commitez-le avec la correction.///
 
 
-6. Recommencez les opérations 4 et 5 avec `api.py`.
+6. Recommencez les opérations 4 et 5 avec `api.py`.///
 
 
 7. Recommencez les opérations 4 et 5 avec `cli.py`. À quoi sert le paramètre
-   « file » ? Comment cette technique s’appelle-t-elle ?
+   « file » ? Comment cette technique s’appelle-t-elle ?///
+Permet un gain de temp pour les teste, permet une facilitation l'identification d'un bugs.
 
 
 8. Recommencez les opérations 4 et 5 avec `__main__.py`. À quoi sert le
