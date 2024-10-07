@@ -238,11 +238,11 @@ lève une exception, on peut considérer cela comme un bug.
 
 7. Recommencez les opérations 4 et 5 avec `cli.py`. À quoi sert le paramètre
    « file » ? Comment cette technique s’appelle-t-elle ?///
-Permet un gain de temp pour les teste, permet une facilitation l'identification d'un bugs.
+
 
 
 8. Recommencez les opérations 4 et 5 avec `__main__.py`. À quoi sert le
-   commentaire « pragma: no cover » ? Grâce à votre expérience acquise avec la
+   commentaire « pragma: no cover » ?/// Grâce à votre expérience acquise avec la
    question précédente, utilisez la même technique pour améliorer l’efficacité
    de vos tests.
 
@@ -288,3 +288,15 @@ méthodes pour s’assurer que le code suit toujours ces bonnes pratiques.
 
 Si vous avez des réponses à écrire, des remarques à faire sur votre travail,
 ajoutez-les à la fin de ce fichier.
+
+
+Q6
+Je suis pas sure que se soit la bonne syntaxe (jai fait de recherche sur internette).
+ rows = db.get_individual_medals(athlete_id=1)
+ assert len(rows) == 1
+
+Q7
+Permet un gain de temp pour les teste, permet une facilitation l'identification d'un bugs.
+
+Q8
+« pragma: no cover » cela veux dire que le programme n'est pas totalement couvet par le test.
