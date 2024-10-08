@@ -1,6 +1,5 @@
 from olympics.__main__ import main
-
-
+    
 def test_countries():
     argv = ['countries']
     main(argv)
@@ -11,4 +10,9 @@ def test_collective():
 
 def test_individual():
     argv = ['individual']
+    main(argv)
+
+
+def test_erreur():
+    argv = ['countries', '-1' ]
     main(argv)
