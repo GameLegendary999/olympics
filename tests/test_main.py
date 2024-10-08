@@ -1,5 +1,8 @@
 from olympics.__main__ import main
-    
+import pytest
+import argparse
+
+ 
 def test_countries():
     argv = ['countries']
     main(argv)
@@ -14,5 +17,6 @@ def test_individual():
 
 
 def test_erreur():
-    argv = ['countries', '-1' ]
-    main(argv)
+    with pytest.raises(argparse.ArgumentTypeError):
+        args = ["countries", "-1"]
+        main(args)
