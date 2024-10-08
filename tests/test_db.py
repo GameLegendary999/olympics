@@ -7,7 +7,7 @@ def test_countries():
     rows = db.get_countries(id=1)
     assert len(rows) == 1
 
-"""Fait par Gesuino"""
+#Fait par gésuino
     
 def test_atletes():
     rows = db.get_athletes()

@@ -9,7 +9,7 @@ def test_top_countries():
     text = string.getvalue()
     assert 'Top' in text
     
-"""Fait par Gesuino"""
+#Fait par gésuino
 
 def test_top_collective():
     string = StringIO()

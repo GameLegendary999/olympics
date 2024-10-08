@@ -2,6 +2,7 @@ from olympics.__main__ import main
 import pytest
 import argparse
 
+ #Fait par gésuino
  
 def test_countries():
     argv = ['countries']
