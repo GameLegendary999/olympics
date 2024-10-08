@@ -20,3 +20,4 @@ def test_error():
     with pytest.raises(argparse.ArgumentTypeError):
         args = ["countries", "--top", "-1"]
         main(args)
+
