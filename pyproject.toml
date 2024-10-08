@@ -18,6 +18,5 @@ dependencies = [
 addopts = "-v --cov --cov-report=term-missing"
 
 [tool.coverage.run]
-branch = true
 include = ["tests/*", "olympics/*"]
 

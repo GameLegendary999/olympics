@@ -14,9 +14,9 @@ def test_collective():
 def test_individual():
     argv = ['individual']
     main(argv)
+    
 
-
-def test_erreur():
+def test_error():
     with pytest.raises(argparse.ArgumentTypeError):
-        args = ["countries", "-1"]
+        args = ["countries", "--top", "-1"]
         main(args)
