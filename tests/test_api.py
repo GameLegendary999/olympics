@@ -11,6 +11,8 @@ def test_countries():
     assert response.status_code == 200
     assert len(response.json()) > 100
 
+"""Fait par Gesuino"""
+
 def test_athletes():
     response = client.get('/athletes/')
     assert response.status_code == 200

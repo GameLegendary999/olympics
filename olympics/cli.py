@@ -5,9 +5,9 @@ from rich.table import Table
 
 from . import db
 
-
+#Bug Corigé
 def top_countries(top=10, file=None):
-    table = Table(title=f"Top {top} countries")
+    table = Table(title=f'Top {top} countries')
 
     table.add_column('Country')
     table.add_column('Gold', justify='right')
@@ -21,7 +21,7 @@ def top_countries(top=10, file=None):
             str(row['gold']),
             str(row['silver']),
             str(row['bronze']),
-            str(row['gold'] + row['silver'] + row['gold']),
+            str(row['gold'] + row['silver'] + row['bronze']),
         )
 
     console = Console(file=file)

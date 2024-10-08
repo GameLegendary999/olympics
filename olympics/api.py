@@ -121,7 +121,7 @@ def individual_medals(athlete_id: int | None = None):
     """
     return db.get_individual_medals(athlete_id)
 
-
+#Bug Corigé
 @app.get("/top-individual/")
 def top_individual(top: int | None = 10):
     """Medal count ranking of athletes for individual events.
@@ -129,4 +129,4 @@ def top_individual(top: int | None = 10):
     Number of athletes is limited to the given top number.
 
     """
-    return db.get_top_collective(top)
+    return db.get_top_individual(top)

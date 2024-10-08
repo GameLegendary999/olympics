@@ -6,6 +6,8 @@ def test_countries():
     assert len(rows) > 100
     rows = db.get_countries(id=1)
     assert len(rows) == 1
+
+"""Fait par Gesuino"""
     
 def test_atletes():
     rows = db.get_athletes()

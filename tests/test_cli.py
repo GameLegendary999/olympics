@@ -8,6 +8,8 @@ def test_top_countries():
     cli.top_countries(file=string)
     text = string.getvalue()
     assert 'Top' in text
+    
+"""Fait par Gesuino"""
 
 def test_top_collective():
     string = StringIO()
