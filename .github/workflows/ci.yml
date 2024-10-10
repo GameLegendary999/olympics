@@ -1,0 +1,40 @@
+name: CI
+
+
+on:
+    push:
+    pull-request:
+
+jobs:
+    run-test:
+        strategy:
+            fail-fast: false
+            matrics:
+                os: [ubuntu-last, macos-last,  windows-last]
+                python-version:
+                    "3.7"
+                    "3.8"
+                    "3.9"
+                    "3.10"
+                    "3.11"
+                    "3.12-dev"
+                    "pypy3.7"
+                    "pypy3.8"
+                    "pypy3.9"
+        name: Test
+        runs-on: ${{matrics.os}}
+
+        steps:
+            name: Checkout code
+            use: actions/checkout@v4
+
+            name: Set up Python
+            use: actions/setup-python@v5
+            with:
+                python-version: ${{matrics.python_version}}
+            
+                name: Install dependencies
+                run: python -m pip install pytest
+
+                name: Run tests
+                run: pytest
