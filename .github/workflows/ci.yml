@@ -1,40 +1,39 @@
-name: CI
+name: Auto Test Olympics
 
-
-on:
-    push:
-    pull-request:
+on: [push]
 
 jobs:
-    run-test:
-        strategy:
-            fail-fast: false
-            matrics:
-                os: [ubuntu-last, macos-last,  windows-last]
-                python-version:
-                    "3.7"
-                    "3.8"
-                    "3.9"
-                    "3.10"
-                    "3.11"
-                    "3.12-dev"
-                    "pypy3.7"
-                    "pypy3.8"
-                    "pypy3.9"
-        name: Test
-        runs-on: ${{matrics.os}}
+  build:
 
-        steps:
-            name: Checkout code
-            use: actions/checkout@v4
+    runs-on: ${{ matrix.os }}
+    strategy:
+        
+      matrix:
+        os: [macos-latest, windows-latest]
+        python-version: ["3.9", "3.10", "3.11", "pypy3.9", "pypy3.10"]
+        exclude:
+          - os: macos-latest
+            python-version: "3.9"
+          - os: windows-latest
+            python-version: "3.9"
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
 
-            name: Set up Python
-            use: actions/setup-python@v5
-            with:
-                python-version: ${{matrics.python_version}}
-            
-                name: Install dependencies
-                run: python -m pip install pytest
+        with:
+          python-version: '3.10'
+          #fait par Gésuino 
+        
+      - name: Install pytest
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install ruff
 
-                name: Run tests
-                run: pytest
+      - name: Pytest
+        run: |
+          pip install pytest pytest-cov
+          python -m pytest

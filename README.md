@@ -300,6 +300,3 @@ Permet un gain de temp pour les teste, permet une facilitation l'identification 
 
 Q8
 « pragma: no cover » cela veux dire que le programme n'est pas totalement couvet par le test.
-
-
-Remarques : je n'ais pas compris comment on utilise action de github mais je vous laisse comme même le fichier que j'ai essayer de faire
