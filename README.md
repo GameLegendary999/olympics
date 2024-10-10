@@ -300,3 +300,7 @@ Permet un gain de temp pour les teste, permet une facilitation l'identification 
 
 Q8
 « pragma: no cover » cela veux dire que le programme n'est pas totalement couvet par le test.
+
+
+Commantaire:
+Configurez GitHub Actions sur votre dépôt fait mais je sais pas si sa marchera
